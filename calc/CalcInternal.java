@@ -23,6 +23,12 @@ public class CalcInternal {
 	}
 	
 	public String operate(String op) {
+		
+		if(op.equals("C" )) {
+			stack = new ListStack<Integer>();
+			return "0";
+		}
+		
 		//if the user presses . if applicable, it pushes the number into the stack
 		if(op.equals(".")) {
 			seperate();
@@ -48,9 +54,6 @@ public class CalcInternal {
 		
 		
 		switch(op) {
-		case "C":
-			stack = new ListStack<Integer>();
-			return " ";
 		case "+":
 			ret = first + second;
 			break;

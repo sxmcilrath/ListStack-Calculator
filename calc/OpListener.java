@@ -18,6 +18,7 @@ public class OpListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		
 		String output = intern.operate(op);
 		System.out.print(output);
 		if(output.equals("")) {
