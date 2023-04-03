@@ -17,9 +17,10 @@ public class NumListener implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		face.writeToScreen(""+num);
+		
+		face.writeToScreen(intern.enterNumber(num));
 
-		intern.enterNumber(num);
+		
 	}
 
 }

@@ -7,9 +7,13 @@ public class CalcInternal {
 	private String op;
 	private ListStack<Integer> stack = new ListStack<Integer>();
 	
-	public void enterNumber(int num) {
+	public String enterNumber(int num) {
 		
+		if(temp.contains("-")) {
+			seperate();
+		}
 		temp = temp + num;
+		return temp;
 		
 	}
 	
@@ -24,8 +28,25 @@ public class CalcInternal {
 	
 	public String operate(String op) {
 		
+		if(op.equals("PM")) {
+			if(temp.equals("")) {
+				if(!stack.isEmpty()){
+					int pop = 0 - stack.pop();
+					stack.push(pop);
+					return "" + pop;
+				}
+			}
+			else if(temp.contains("-")) {
+				
+			}
+			else {
+				temp = "-" + temp;
+			}
+			return temp;
+		}
 		if(op.equals("C" )) {
 			stack = new ListStack<Integer>();
+			temp = "";
 			return "0";
 		}
 		
