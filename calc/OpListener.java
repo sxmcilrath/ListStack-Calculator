@@ -20,7 +20,6 @@ public class OpListener implements ActionListener {
 		// TODO Auto-generated method stub
 		
 		String output = intern.operate(op);
-		System.out.print(output);
 		if(output.equals("")) {
 			
 		}
