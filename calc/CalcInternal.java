@@ -1,11 +1,11 @@
 package calc;
-
+/**
+ * represents the internal calculations of the calculator
+ * @author samuelmcilrath
+ */
 public class CalcInternal {
-	private String temp = "";
-	private int first;	//holds first number 
-	private int second; //holds second number
-	private String op;
-	private ListStack<Integer> stack = new ListStack<Integer>();
+	private String temp = "";	//holds a temporary number that the user interacts with
+	private ListStack<Integer> stack = new ListStack<Integer>();	//the stack that contains operands
 	
 	/**
 	 * Adds the appropriate number either to the stack or the 
@@ -27,7 +27,7 @@ public class CalcInternal {
 	}
 	
 	/**
-	 * if there's a temporary then it pushes to the stack
+	 * if there's a temporary number then it pushes to the stack
 	 */
 	public void seperate() {
 		if(temp.equals("")) {
@@ -45,6 +45,9 @@ public class CalcInternal {
 	 * @return		number to print to screen
 	 */
 	public String operate(String op) {
+		int first;			//holds first number 
+		int second; 		//holds second number	
+		
 		//PM case
 		if(op.equals("PM")) {
 			
@@ -58,7 +61,6 @@ public class CalcInternal {
 					return "" + pop;
 				}
 			}
-			
 			//add a negative to the current number
 			else {
 				temp = "-" + temp;

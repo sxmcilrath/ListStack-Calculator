@@ -20,8 +20,7 @@ public class SetUp {
 	 */
 	public static void setUpCalculator(CalculatorFace face) {
 		CalcInternal intern = new CalcInternal();
-		// delete this line.
-		face.writeToScreen("hello");
+
 		
 		//connect operation buttons to listeners
 		face.addActionListener('+', new OpListener(face, intern, "+"));
@@ -45,8 +44,7 @@ public class SetUp {
 		face.addNumberActionListener(8, new NumListener(face, 8, intern));
 		face.addNumberActionListener(9, new NumListener(face, 9, intern));
 		
-		// add code here that will have the effect of connecting
-		// the given face to your calculator
+
 		
 		
 	}
