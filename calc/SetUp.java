@@ -19,7 +19,7 @@ public class SetUp {
 	 * the calculator. 
 	 */
 	public static void setUpCalculator(CalculatorFace face) {
-		CalcInternal intern = new CalcInternal();
+		CalcInternal intern = new CalcInternal();	//create instance of internals to perform operations
 
 		
 		//connect operation buttons to listeners

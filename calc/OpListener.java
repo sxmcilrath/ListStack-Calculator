@@ -3,6 +3,10 @@ package calc;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * action Slistener for operation buttons
+ * @author samuelmcilrath
+ */
 public class OpListener implements ActionListener {
 
 	private CalculatorFace face;	//access display

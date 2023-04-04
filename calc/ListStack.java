@@ -44,7 +44,7 @@ public class ListStack<T> {
 	}
 	
 	/**
-	 * pops of top node
+	 * removes top node
 	 * @return	either returns null if empty or returns the top of the stack
 	 */
 	public T pop() {

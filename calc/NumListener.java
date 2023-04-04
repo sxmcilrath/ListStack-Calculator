@@ -3,6 +3,10 @@ package calc;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * action listener for number buttons
+ * @author samuelmcilrath
+ */
 public class NumListener implements ActionListener {
 
 	private CalculatorFace face;	//access display
