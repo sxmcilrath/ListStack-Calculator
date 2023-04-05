@@ -16,11 +16,20 @@ public class CalcInternal {
 	 */
 	public String enterNumber(int num) {
 		
+		//case to catch weird formatting with 0's
+		if(temp.equals("0") && num == 0) {
+			return temp;
+		}
+		else if(temp.equals("0")){
+			temp = "";
+		}
+		
 		//if the number in temp is already negative then it is added
 		//to the stack
 		if(temp.contains("-")) {
 			seperate();
 		}
+		
 		temp = temp + num;
 		return temp;
 		
@@ -116,6 +125,10 @@ public class CalcInternal {
 			break;
 	
 		case "/":
+			//catch div by 0
+			if(second == 0) {
+				return "endef";
+			}
 			ret = first / second;	
 		break;
 		
